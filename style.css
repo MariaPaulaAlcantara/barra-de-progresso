@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+
+section #sectionId{
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e2e2e;
+}
+
+.containerProgresso{
+    position: relative;
+    width: 500px;
+}
+
+.containerProgresso h2{
+    color: #fff;
+}
+
+.containerProgresso .skills{
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    padding: 24px 10px 18px;
+    background: linear-gradient(#616161 0%, #333 10%, #222);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #000;
+    transition: 0.5s;
+
+}
+
+.containerProgresso:hover .skills{
+    opacity: 0.05;
+}
+
+.containerProgresso .skills:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.containerProgresso .skills:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 10;
+}
+
+.containerProgresso .skills .Name{
+    position: relative;
+    width: 110px;
+    text-align: right;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.containerProgresso .skills .Value{
+    position: relative;
+    width: 40px;
+    text-align: left;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.containerProgresso .skills .percent{
+    position: relative;
+    width: calc(100% - 150px);
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #151515;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+.containerProgresso .skills .percent .progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: inset 0 0 2px #000;
+    animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate{
+    from{
+        width: 0;
+    }
+}
+
+.containerProgresso .skills:nth-child(2) .percent .progress{
+    background: linear-gradient(45deg, #1fe6ff, #673AB7);
+}
+
+.containerProgresso .skills:nth-child(3) .percent .progress{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.containerProgresso .skills:nth-child(4) .percent .progress{
+    background: linear-gradient(to right, #ef32d9, #89fffd);
+}
+
+.containerProgresso .skills:nth-child(5) .percent .progress{
+    background: linear-gradient(to right, #fc00ff, #00dbde);
+}
+
+.containerProgresso .skills:nth-child(6) .percent .progress{
+    background: linear-gradient(to right, #16bffd, #cb3066);
+}
+
+.containerProgresso .skills:nth-child(7) .percent .progress{
+    background: linear-gradient(to right, #3a6c7e, #7f2cc4);
+}
